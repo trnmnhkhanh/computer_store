@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PetShop Template">
+    <meta name="keywords" content="PetShop, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pet shop</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="index.html"><img src="../img/logo.png" alt=""></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="wish-list.html"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+            <div class="header__cart__price">Mục: <span>$150.00</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <img src="img/language.png" alt="">
+                <div>Tiếng Việt</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Tiếng Việt</a></li>
+                    <li><a href="#">Tiếng Anh</a></li>
+                </ul>
+            </div>
+            <div class="header__top__right__auth">
+                <a href="login.html"><i class="fa fa-user"></i> Đăng nhập</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="index.html">Trang chủ</a></li>
+                <li><a href="shop-grid.html">Shop</a></li>
+                <li><a href="dog-blog.html">Chó</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="dog-blog.html">Chăm sóc</a></li>
+                        <li><a href="dog-blog.html">Sức khỏe</a></li>
+                        <li><a href="dog-blog.html">Dinh dưỡng</a></li>
+                    </ul>
+                </li>
+                <li><a href="cat-blog.html">Mèo</a>
+                    <ul class="header__menu__dropdown">                     
+                            <li><a href="cat-blog.html">Chăm sóc</a></li>
+                            <li><a href="cat-blog.html">Sức khỏe</a></li>
+                            <li><a href="cat-blog.html">Dinh dưỡng</a></li>           
+                    </ul>
+                </li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                <li>Free ship cho đơn hàng trên 3 triệu đồng</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header" id="navbar">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                                <li>Free ship cho đơn hàng trên 3 triệu đồng</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="header__top__right__language">
+                                <img src="img/language.png" alt="">
+                                <div>Tiếng Việt</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a href="#">Tiếng Anh</a></li>
+                                    <li><a href="#">Tiếng Việt</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="login.html"><i class="fa fa-user"></i>Đăng nhập</a>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a href="account/profile.html">Tài khoản</a></li>
+                                    <li><a href="#">Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container" >
+                <div class="row fix" >
+                    <div class="col-lg-3">
+                        <div class="header__logo logo">
+                            <a href="index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="header__menu">
+                            <ul>
+                                <li><a href="index.html">Trang chủ</a></li>
+                                <li><a href="shop-grid.html">Shop</a></li>
+                                <li><a href="dog-blog.html">Chó</a>
+                                    <ul class="header__menu__dropdown">
+                                        <li><a href="dog-blog.html">Chăm sóc</a></li>
+                                        <li><a href="dog-blog.html">Sức khỏe</a></li>
+                                        <li><a href="dog-blog.html">Dinh dưỡng</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="cat-blog.html">Mèo</a>
+                                    <ul class="header__menu__dropdown">
+                                        <li><a href="cat-blog.html">Chăm sóc</a></li>
+                                        <li><a href="cat-blog.html">Sức khỏe</a></li>
+                                        <li><a href="cat-blog.html">Dinh dưỡng</a></li>
+            
+                                    </ul>
+                                </li>
+                                 <li><a href="contact.html">Liên hệ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="header__cart">
+                            <ul>
+                                <li><a href="wish-list.html"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                                <div class="cart">
+                                    <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                                    <div class="list">
+
+                                        <div class="shopping-cart-header">
+                                            <li><a><i class="fa fa-shopping-bag" id="cart-icon"></i> <span>3</span></a></li>
+                                            <div class="shopping-cart-total">
+                                                <span class="lighter-text">Total:</span>
+                                                <span class="main-color-text">$2,229.97</span>
+                                            </div>
+                                        </div> <!--end shopping-cart-header -->
+
+                                        <ul class="shopping-cart-items">
+                                            <li class="clearfix">
+                                                <img src="img/product/Dog/Alaska/Giant/giant.jpg" alt="item1" />
+                                                <div>
+                                                <span class="item-name">Alaska khổng lồ (Giant)</span>
+                                                    <span class="delete-btn">Xóa</span>
+                                                </div>
+                                                <div>
+                                                <span class="item-price">$849.99</span>
+                                                <span class="item-quantity">Số lượng: 01</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="clearfix">
+                                                <img src="img/product/Dog/Pomeranian/Mini/mini2.jpg" alt="item1" />
+                                                <div>
+                                                <span class="item-name">Phốc sốc mini</span>
+                                                    <span class="delete-btn">Xóa</span>
+                                                </div>
+                                                <div>
+                                                <span class="item-price">100000000</span>
+                                                <span class="item-quantity">Số lượng: 01</span>
+                                                </div>
+                                            </li>
+
+                                            <li class="clearfix">
+                                                <img src="img/product/Dog/Becgie/Duc/duc2.jpg" alt="item1" />
+                                                <div>
+                                                <span class="item-name">Becgie Đức</span>
+                                                    <span class="delete-btn">Xóa</span>
+                                                </div>
+                                                <div>
+                                                <span class="item-price">$129.99</span>
+                                                <span class="item-quantity">Số lượng: 01</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <a href="shoping-cart.html" class="checkout-button">Xem giỏ hàng</a>
+
+                                    </div>
+                                </div>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="humberger__open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Tất cả sản phẩm</span>
+                        </div>
+                        <ul class="hero__categories__menu">
+                            <li><a href="#">Chó</a>
+
+                            </li>
+                            <li><a href="#">Mèo</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="#">
+                                <div class="hero__search__categories">
+                                    Tất cả sản phẩm
+                                    <span class="arrow_carrot-down"></span>
+                                </div>
+                                <input type="text" placeholder="Bạn cần gì?">
+                                <button type="submit" class="site-btn">TÌM KIẾM</button>
+                            </form>
+                        </div>
+                        <div class="hero__search__phone">
+                            <div class="hero__search__phone__icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="hero__search__phone__text">
+                                <h5>+65 11.188.888</h5>
+                                <span>Hỗ trợ 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <div class="breadcrumb__option">
+                            <a href="./index.html">Trang chủ</a>
+                            <a href="./index.html">Chó</a>
+                            <a href="./index.html">Pomeranian</a>
+                            <span> Pomeranian trắng 01</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Product Details Section Begin -->
+    <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            <img class="product__details__pic__item--large"
+                                src="img/product/details/cat-3.jpg" alt="">
+                        </div>
+                        <div class="product__details__pic__slider owl-carousel">
+                            <img data-imgbigurl="img/product/details/product-details-2.jpg"
+                                src="img/product/details/cat-3.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-3.jpg"
+                                src="img/product/details/cat-3.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-5.jpg"
+                                src="img/product/details/cat-3.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-4.jpg"
+                                src="img/product/details/cat-3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
+                        <h3>Pomeranian trắng 01</h3>
+                        <div class="product__details__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span>(18 đánh giá)</span>
+                        </div>
+                        <div class="product__details__price">10.000.000đ</div>
+                        <p>- Giống: Pomeranian <br>
+                            - Màu mắt: Đen huyền.<br>
+                            
+                            - Tuổi: 60 ngày.<br>
+                            - Giới tính: Cái, Đực.<br>
+                            - Màu lông: Trắng.<br>
+                            
+                            - Số lượng: 2 bé<br>
+                            - Ngoại hình: Đẹp, lông rất mướt, form chuẩn.<br>
+                            - Nguồn gốc: Sinh sản tại TP.HCM.<br>
+                            - Sức khoẻ tốt, đón bé ngay.<br>
+                            - Vacxin: 1 mũi 4 bệnh, sổ giun 2 lần.</p>
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input type="text" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" ><button class="primary-btn">Thêm vào giỏ hàng</button></a>
+                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                        <ul>
+                            <li><b>Tình trạng</b> <span>Còn hàng</span></li>
+                            <li><b>Vận chuyển</b> <span>Trong 1 ngày <samp></samp></span></li>
+                            <li><b>Chia sẻ</b>
+                                <div class="share">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="product__details__tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+                                    aria-selected="true">Mô tả</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
+                                    aria-selected="false">Nhận xét <span>(1)</span></a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Chó Pom được lấy tên từ địa danh Pomerania là vùng đất ở Trung Âu ngày xưa, ứng với miền Tây Bắc Ba Lan và Đông Bắc Đức ngày nay và nguồn gốc của chúng là từ giống Spitz cổ. Lúc đầu, những con chó Pom to hơn hiện nay nhiều với cân nặng có khi lên đến khoảng 13 kg và hay được giao cho nhiệm vụ chăn cừu. Vào năm 1988, Nữ hoàng Victoria đã nhân giống loài chó này
+                                        và chính bà đã khiến kích cỡ của chúng nhỏ lại và nhờ thế chúng bắt đầu trở nên rất phổ biến ở Anh.
+                                        Chó Pom là giống chó cỡ nhỏ, kích thước chỉ cỡ bằng một món đồ chơi, Chiều cao từ 7-12 inches (18–30 cm), trọng lượng từ 3-7 pounds (1–3 kg), chúng có cái đầu hình nêm và rất cân xứng với cơ thể, một số con có gương mặt giống như loài cáo, một số con khác lại giống như búp bê. Đôi mắt chúng hình quả hạnh, to vừa phải và có màu sẫm, trông rất sáng và thể hiện rõ sự linh lợi và thông minh. Tai chó Phốc sóc nhỏ nhắn, nhọn dựng thẳng trên đầu, hàm răng hình kéo và cái mũi be bé sẽ cùng màu với bộ lông. Chúng có cái đuôi xù, trông rất mềm mại và uốn cong lên lưng. Giống chó này cũng có bộ lông kép dày với lớp ngoài dài, thẳng và hơi cứng còn lớp trong thì ngắn, mềm và dày. Lớp lông ở vùng cổ và ngực chúng sẽ dài hơn. Nhìn chung trông
+                                        chúng nhỏ nhắn xinh xắn, ấm áp và mềm mại. Màu lông của chúng cũng khá đa dạng: có thể là màu đỏ, cam, kem, trắng, xanh, nâu, đen…</h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <div class="container bootstrap snippets bootdey">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="blog-comment">
+                                                    <p>4 bình luận</p>
+                                                    <hr/>
+                                                    <ul class="comments">
+                                                        <li class="clearfix">
+                                                        <img src="img/avatar/avatar1.jpg" class="avatar" alt="">
+                                                        <div class="post-comments">
+                                                            <p class="meta">2/2/2020, JohnDoe: <i class="pull-right"><a href="#"><small>Trả lời</small></a></i></p>
+                                                            <p>
+                                                                Đẹp quá ạ
+                                                            </p>
+                                                        </div>
+                                                        </li>
+                                                        <li class="clearfix">
+                                                        <img src="img/avatar/avatar2.jpg" class="avatar" alt="">
+                                                        <div class="post-comments">
+                                                            <p class="meta">3/2/2020, Jack: <i class="pull-right"><a href="#"><small>Trả lời</small></a></i></p>
+                                                            <p>
+                                                               Dễ thương quá shop
+                                                            </p>
+                                                        </div>
+                                                        
+                                                        <ul class="comments">
+                                                            <li class="clearfix">
+                                                                <img src="img/avatar/avatar_default.jpg" class="avatar" alt="">
+                                                                <div class="post-comments">
+                                                                    <p class="meta">3/2/2020 admin : <i class="pull-right"><a href="#"><small>Reply</small></a></i></p>
+                                                                    <p>
+                                                                        Shop xin cảm ơn
+                                                                    </p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <textarea class="form-control" placeholder="Viết bình luận" rows="3"></textarea>
+                                                    <br>
+                                                    <button type="button" class="btn btn-info pull-right">Post</button>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Details Section End -->
+
+    <!-- Related Product Section Begin -->
+    <section class="related-product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2>Thú cưng liên quan</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+                            <ul class="product__item__pic__hover">
+                                <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="shop-details.html">Phóc sóc trắng 02</a></h6>
+                            <h5>7.000.000đ</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+                            <ul class="product__item__pic__hover">
+                                <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="shop-details.html">Poodle mơ 02</a></h6>
+                            <h5>5.000.000đ</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
+                            <ul class="product__item__pic__hover">
+                                <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="shop-details.html">Corgi vàng 05</a></h6>
+                            <h5>15.000.000đ</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-4.jpg">
+                            <ul class="product__item__pic__hover">
+                                <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="shop-details.html">Pomeranian vàng 06</a></h6>
+                            <h5>9.000.000đ</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Related Product Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo logo">
+                            <a href="index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Địa chỉ: 60-49 Road 11378 New York</li>
+                            <li>SĐT: +65 11.188.888</li>
+                            <li>Email: hello@colorlib.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Link hữu ích</h6>
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Về shop của chúng tôi</a></li>
+                            <li><a href="#">Mua sắm an toàn</a></li>
+                            <li><a href="#">Thông tin vận chuyển</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Sơ  đồ trang web</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Chúng tôi là ai</a></li>
+                            <li><a href="#">Dịch vụ của chúng tôi</a></li>
+                            <li><a href="#">Dự án</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Sự đổi mới</a></li>
+                            <li><a href="#">Chứng thực</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Tham gia bản tin của chúng tôi ngay bây giờ</h6>
+                        <p>
+                            Nhận thông tin cập nhật qua email về cửa hàng mới nhất của chúng tôi và các ưu đãi đặc biệt.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Nhập email của bạn">
+                            <button type="submit" class="site-btn">Đăng ký</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                        <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
