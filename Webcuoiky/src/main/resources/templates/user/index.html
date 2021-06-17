@@ -26,72 +26,428 @@
 
 <body>
 
-    <!-- Header Section Begin -->
-    <div th:replace="user/common/header:: client_header"></div>
-    <!-- Header Section End -->
+<!-- Header Section Begin -->
+<div th:replace="user/common/header:: client_header"></div>
+<!-- Header Section End -->
 
-    <!-- Hero Section Begin -->
-    <div th:replace="user/common/section-hero:: section-hero"></div>
-    <!-- Hero Section End -->
+<!-- Hero Section Begin -->
+<div th:replace="user/common/section-hero:: section-hero"></div>
+<!-- Hero Section End -->
 
-    <!-- Categories Section Begin -->
-    <div th:replace="user/common/section-category:: section-category"></div>
-    <!-- Categories Section End -->
-
-    <!-- Featured Section Begin -->
-    <div th:replace="user/common/section-featured:: section-featured"></div>
-    <!-- Featured Section End -->
-
-    <!-- Banner Begin -->
-    <div class="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
-                    <div class="banner__pic">
-                        <img th:src="@{/user/img/banner/banner1.jpg}" alt="">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
-                    <div class="banner__pic">
-                        <img th:src="@{/user/img/banner/banner2.jpg}" alt="">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
-                    <div class="banner__pic">
-                        <img th:src="@{/user/img/banner/banner3.jpg}" alt="">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
-                    <div class="banner__pic">
-                        <img th:src="@{/user/img/banner/banner4.jpg}" alt="">
+<!-- Categories Section Begin -->
+<section class="categories" >
+    <div class="container">
+        <div class="row">
+            <div class="categories__slider owl-carousel">
+                <div class="col-lg-3" th:each="accessory, iterStart:${accessoryList}">
+                    <div class="categories__item set-bg" data-setbg="${}">
+                        <h5><a href="" th:text="${accessory.manufacturer.name}"></a></h5>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Banner End -->
+</section>
+<!-- Categories Section End -->
+<!-- Featured Section Begin -->
+<section class="featured spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Sản phẩm</h2>
+                </div>
+                <div class="featured__controls">
+                    <ul>
+                        <li class="active" data-filter="*">Tất cả</li>
+                        <li data-filter=".oranges">Màn hình</li>
+                        <li data-filter=".fresh-meat">Bàn phím</li>
+                        <li data-filter=".vegetables">Chuột+lót chuột</li>
+                        <li data-filter=".fastfood">Tai nghe Gaming</li>
+                        <li data-filter=".fastfood">Ghế Gaming</li>
+                        <li data-filter=".fastfood">Thiết bị Audio</li>
+                        <li data-filter=".fastfood">Phụ kiện</li>
 
-    <!-- Latest Product Section Begin -->
-    <div th:replace="user/common/section-latest:: section-latest"></div>
-    <!-- Latest Product Section End -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row featured__filter">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                <div class="featured__item">
 
-    <!-- Blog Section Begin -->
-    <!-- Blog Section End -->
+                    <div class="featured__item__pic set-bg" data-setbg="img/product/Dog/Becgie/Bi/bi.jpg">
+                        <span class="sale">-40%</span>
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+
+                        <h6><a href="shop-details.html">Becgie Bỉ 01</a></h6>
+                        <h5>500.000đ</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="img/product/Dog/Becgie/Nga/nga.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="shop-details.html">Becgie Nga 01</a></h6>
+                        <h5>1.000.000đ</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="img/product/Dog/Alaska/Giant/giant.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="shop-details.html">Alaska 01</a></h6>
+                        <h5>10.000.000đ</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="img/product/Dog/Bull/Anh/anh.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="shop-details.html">Bull Anh 01</a></h6>
+                        <h5>6.000.000đ</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="img/product/Dog/Bull/Bully/bully.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="shop-details.html">Bully 01</a></h6>
+                        <h5>4.000.000đ</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="img/product/Dog/Bull/Phap/phap.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="shop-details.html">Bull Pháp 01</a></h6>
+                        <h5>7.000.000đ</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="img/product/Dog/Dachshund/Miniature/miniature.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="shop-details.html">Dachshund Vàng 01</a></h6>
+                        <h5>3.000.000đ</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="img/product/Dog/Dachshund/Standard/standard.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="wish-list.html"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="shop-details.html"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="shop-details.html">Lạp xưởng vàng 01</a></h6>
+                        <h5>1.000.000đ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Featured Section End -->
 
 
-    <!-- Footer Section Begin -->
-    <div th:replace="user/common/footer:: footer"></div>
-    <!-- Footer Section End -->
+<!-- Banner Begin -->
+<div class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
+                <div class="banner__pic">
+                    <img th:src="@{/user/img/banner/banner1.jpg}" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
+                <div class="banner__pic">
+                    <img th:src="@{/user/img/banner/banner2.jpg}" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
+                <div class="banner__pic">
+                    <img th:src="@{/user/img/banner/banner3.jpg}" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
+                <div class="banner__pic">
+                    <img th:src="@{/user/img/banner/banner4.jpg}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner End -->
 
-    <!-- Js Plugins -->
-    <script th:src="@{/user/js/jquery-3.3.1.min.js}"></script>
-    <script th:src="@{/user/js/bootstrap.min.js}"></script>
-    <script th:src="@{/user/js/jquery.nice-select.min.js}"></script>
-    <script th:src="@{/user/js/jquery-ui.min.js}"></script>
-    <script th:src="@{/user/js/jquery.slicknav.js}"></script>
-    <script th:src="@{/user/js/mixitup.min.js}"></script>
-    <script th:src="@{/user/js/owl.carousel.min.js}"></script>
-    <script th:src="@{/user/js/main.js}"></script>
+<!-- Latest Product Section Begin -->
+<section class="latest-product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-product__text">
+                    <h4>Mới nhất</h4>
+                    <div class="latest-product__slider owl-carousel">
+                        <div class="latest-prdouct__slider__item">
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/latest-product/lp-1.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Pomeranian trắng 01</h6>
+                                    <span>8.000.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/latest-product/lp-2.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Poodle vàng mơ 01</h6>
+                                    <span>5.000.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/latest-product/lp-3.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Corgi vàng 01</h6>
+                                    <span>11.000.000đ</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="latest-prdouct__slider__item">
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/latest-product/bull1.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Bully 02</h6>
+                                    <span>9.000.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/latest-product/phoc-soc1.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Pomeranian vàng 02</h6>
+                                    <span>15.000.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/latest-product/pug1.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Pug vàng 01</h6>
+                                    <span>4.000.000đ</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-product__text">
+                    <h4>Bán chạy nhất</h4>
+                    <div class="latest-product__slider owl-carousel">
+                        <div class="latest-prdouct__slider__item">
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/fast_sell/pug1.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Pug 01</h6>
+                                    <span>3.000.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/fast_sell/phoc-soc02.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Phóc sóc 02</h6>
+                                    <span>10.000.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/fast_sell/phoc-soc3.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Phóc sóc 03</h6>
+                                    <span>8.000.000đ</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="latest-prdouct__slider__item">
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/fast_sell/pug2.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Pug 02</h6>
+                                    <span>3.500.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/fast_sell/pug3.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Pug 03</h6>
+                                    <span>4.000.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/fast_sell/samoyed1.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Samoyed 01</h6>
+                                    <span>8.500.000đ</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-product__text">
+                    <h4>Khuyến mãi</h4>
+                    <div class="latest-product__slider owl-carousel">
+                        <div class="latest-prdouct__slider__item">
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/sale/bull-phap3.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Bull Pháp 03</h6>
+                                    <span>7.000.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/sale/bull-phap4.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Bull Pháp 04</h6>
+                                    <span>8.000.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/sale/corgi4.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Corgi 04</h6>
+                                    <span>10.000.000đ</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="latest-prdouct__slider__item">
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/sale/lap-xuong1.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Lạp xưởng 01</h6>
+                                    <span>800.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/sale/poodle1.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Poodle 01</h6>
+                                    <span>5.000.000đ</span>
+                                </div>
+                            </a>
+                            <a href="shop-details.html" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="img/sale/pug3.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Pug 03</h6>
+                                    <span>4.500.000đ</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Latest Product Section End -->
+
+<!-- Footer Section Begin -->
+<div th:replace="user/common/footer:: footer"></div>
+<!-- Footer Section End -->
+
+<!-- Js Plugins -->
+<script th:src="@{/user/js/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/user/js/bootstrap.min.js}"></script>
+<script th:src="@{/user/js/jquery.nice-select.min.js}"></script>
+<script th:src="@{/user/js/jquery-ui.min.js}"></script>
+<script th:src="@{/user/js/jquery.slicknav.js}"></script>
+<script th:src="@{/user/js/mixitup.min.js}"></script>
+<script th:src="@{/user/js/owl.carousel.min.js}"></script>
+<script th:src="@{/user/js/main.js}"></script>
 
 
 </body>
