@@ -1,0 +1,31 @@
+<html>
+<body>
+<form name="form1">
+    <table border="1">
+        <tr bgcolor="#336699">
+            <td onclick="ChangeCell(this)">AAAAA</td>
+            <td onclick="ChangeCell(this)">BBBBB</td>
+            <td onclick="ChangeCell(this)">CCCCC</td>
+            <td onclick="ChangeCell(this)">DDDDD</td>
+        </tr>
+    </table>
+</form>
+</body>
+
+<script language="javascript">
+    var prevObject, prevHTML, bClickTrue;
+    bClickTrue = false;
+
+    function ChangeCell(obj)
+    {
+        //Assigning the original value for the previous TD
+        if (bClickTrue == true)
+            prevObject.innerHTML = prevHTML;
+
+        prevObject = obj;
+        prevHTML = obj.innerHTML;
+        obj.innerHTML = "<input type='text'>";
+        bClickTrue = true;
+    }
+</script>
+</html>

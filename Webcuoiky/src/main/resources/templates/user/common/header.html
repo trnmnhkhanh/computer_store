@@ -1,0 +1,149 @@
+<div th:fragment="client_header" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<!-- Header Section Begin -->
+
+<header class="header" id="navbar">
+
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="header__top__left">
+                        <ul>
+                            <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                            <li>Free ship cho đơn hàng trên 3 triệu đồng</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="header__top__right">
+                        <div class="header__top__right__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
+                        <div class="header__top__right__language">
+                            <select>
+                                <option value="vi"><a href="#">VietNamese</a></option>
+                                <option value="en"><a href="#">English</a></option>
+                            </select>
+                        </div>
+                    <th:block sec:authorize="isAuthenticated()">
+                        <div class="header__top__right__auth">
+                            <i class="fa fa-user" th:utext="${#request.userPrincipal.name}"></i>
+                            <span class="arrow_carrot-down"></span>
+                            <ul>
+                                <li><a th:href="@{/profile}">Tài khoản</a></li>
+                                <li><a th:href="@{/logout}">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </th:block>
+                     <th:block  sec:authorize="!isAuthenticated()">
+                        <div class="header__top__right__auth">
+                            <a th:href="@{/login}"><i class="fa fa-user"></i>Đăng nhập</a>
+                            <span class="arrow_carrot-down"></span>
+                            <ul>
+                                <li><a th:href="@{/register}">Đăng ký</a></li>
+                            </ul>
+                        </div>
+                     </th:block>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="container" >
+            <div class="row fix" >
+                <div class="col-lg-3">
+                    <div class="header__logo logo">
+                        <a href=""><img src="../img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a th:href="@{/}">Trang chủ</a></li>
+                            <li><a href="shop-grid.html">Khuyến mãi</a></li>
+                            <li><a href="dog-blog.html">Thông tin</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="dog-blog.html">Trả góp</a></li>
+                                    <li><a href="dog-blog.html">Bảo hành</a></li>
+                                    <li><a href="dog-blog.html">Vận chuyển</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__cart">
+                        <ul>
+                            <li><a href="wish-list.html"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <div class="cart">
+                                <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                                <div class="list">
+
+                                    <div class="shopping-cart-header">
+                                        <li><a><i class="fa fa-shopping-bag" id="cart-icon"></i> <span>3</span></a></li>
+                                        <div class="shopping-cart-total">
+                                            <span class="lighter-text">Total:</span>
+                                            <span class="main-color-text">$2,229.97</span>
+                                        </div>
+                                    </div> <!--end shopping-cart-header -->
+
+                                    <ul class="shopping-cart-items">
+                                        <li class="clearfix">
+                                            <img src="img/product/Dog/Alaska/Giant/giant.jpg" alt="item1" />
+                                            <div>
+                                                <span class="item-name">Alaska khổng lồ (Giant)</span>
+                                                <span class="delete-btn">Xóa</span>
+                                            </div>
+                                            <div>
+                                                <span class="item-price">$849.99</span>
+                                                <span class="item-quantity">Số lượng: 01</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <img src="img/product/Dog/Pomeranian/Mini/mini2.jpg" alt="item1" />
+                                            <div>
+                                                <span class="item-name">Phốc sốc mini</span>
+                                                <span class="delete-btn">Xóa</span>
+                                            </div>
+                                            <div>
+                                                <span class="item-price">100000000</span>
+                                                <span class="item-quantity">Số lượng: 01</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <img src="img/product/Dog/Becgie/Duc/duc2.jpg" alt="item1" />
+                                            <div>
+                                                <span class="item-name">Becgie Đức</span>
+                                                <span class="delete-btn">Xóa</span>
+                                            </div>
+                                            <div>
+                                                <span class="item-price">$129.99</span>
+                                                <span class="item-quantity">Số lượng: 01</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <a href="shoping-cart.html" class="checkout-button">Xem giỏ hàng</a>
+
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header Section End -->
+</div>

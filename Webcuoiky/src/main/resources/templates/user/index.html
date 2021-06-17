@@ -1,0 +1,98 @@
+<!DOCTYPE html >
+<html lang="zxx" ng-app="accomputerApp" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>${title}</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" th:href="@{/user/css/bootstrap.min.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/user/css/font-awesome.min.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/user/css/elegant-icons.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/user/css/nice-select.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/user/css/jquery-ui.min.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/user/css/owl.carousel.min.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/user/css/slicknav.min.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/user/css/style.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/user/css/sale-tag.css}" type="text/css">
+</head>
+
+<body>
+
+    <!-- Header Section Begin -->
+    <div th:replace="user/common/header:: client_header"></div>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <div th:replace="user/common/section-hero:: section-hero"></div>
+    <!-- Hero Section End -->
+
+    <!-- Categories Section Begin -->
+    <div th:replace="user/common/section-category:: section-category"></div>
+    <!-- Categories Section End -->
+
+    <!-- Featured Section Begin -->
+    <div th:replace="user/common/section-featured:: section-featured"></div>
+    <!-- Featured Section End -->
+
+    <!-- Banner Begin -->
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
+                    <div class="banner__pic">
+                        <img th:src="@{/user/img/banner/banner1.jpg}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
+                    <div class="banner__pic">
+                        <img th:src="@{/user/img/banner/banner2.jpg}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
+                    <div class="banner__pic">
+                        <img th:src="@{/user/img/banner/banner3.jpg}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-10 col-padding-small">
+                    <div class="banner__pic">
+                        <img th:src="@{/user/img/banner/banner4.jpg}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Latest Product Section Begin -->
+    <div th:replace="user/common/section-latest:: section-latest"></div>
+    <!-- Latest Product Section End -->
+
+    <!-- Blog Section Begin -->
+    <!-- Blog Section End -->
+
+
+    <!-- Footer Section Begin -->
+    <div th:replace="user/common/footer:: footer"></div>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script th:src="@{/user/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/user/js/bootstrap.min.js}"></script>
+    <script th:src="@{/user/js/jquery.nice-select.min.js}"></script>
+    <script th:src="@{/user/js/jquery-ui.min.js}"></script>
+    <script th:src="@{/user/js/jquery.slicknav.js}"></script>
+    <script th:src="@{/user/js/mixitup.min.js}"></script>
+    <script th:src="@{/user/js/owl.carousel.min.js}"></script>
+    <script th:src="@{/user/js/main.js}"></script>
+
+
+</body>
+</html>
