@@ -25,16 +25,18 @@ public class Accessory extends Auditable implements Serializable {
 
     @Basic(optional = false)
     @Column(name = "name", columnDefinition = "TEXT")
+    @JsonIgnore
     private String name;
 
     @ManyToOne  // nhieu san pham thuoc 1 loai
     @EqualsAndHashCode.Exclude
-    @ToString.Exclude
+    @JsonIgnore
     private Category category;
 
     @NumberFormat(pattern = "#")
     @Column(name = "quantity")
     @Min(0)
+    @JsonIgnore
     private int quantity;
 
     @JsonIgnore
@@ -45,22 +47,17 @@ public class Accessory extends Auditable implements Serializable {
     @JsonIgnore
     private Image image;
 
-    @ManyToMany(mappedBy = "accessories") //nhieu san pham thuoc nhieu gio hang
-    @EqualsAndHashCode.Exclude
-    @ToString.Exclude
-    private Set<ShoppingCart> carts = new HashSet<ShoppingCart>();
-
     @ManyToOne(fetch = FetchType.EAGER) // nhieu san pham thuoc 1 nha san xuat
     @JsonIgnore
     @JoinColumn(name = "manufacturer_id")
     @EqualsAndHashCode.Exclude
-    @ToString.Exclude
     private Manufacturer manufacturer;
 
     @OneToMany(mappedBy = "accessory") //mot san pham co the nam trong nhieu chi tiet don hang
     @JsonIgnore
     private Collection<BillDetail> details;
 
+    @JsonIgnore
     @OneToOne(cascade = CascadeType.ALL)
     private Price price;
 

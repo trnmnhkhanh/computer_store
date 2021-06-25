@@ -1053,7 +1053,9 @@ ol {
 
 .latest-product__item__pic {
 	float: left;
+	width: 111px;
 	margin-right: 26px;
+	height: 110px;
 }
 
 .latest-product__item__pic img {
@@ -1646,6 +1648,7 @@ background: white;
 }
 
 .product__item__pic {
+	border: 1px solid #e49f05;
 	height: 270px;
 	position: relative;
 	overflow: hidden;

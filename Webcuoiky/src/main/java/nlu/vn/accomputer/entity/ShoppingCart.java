@@ -21,14 +21,6 @@ public class ShoppingCart extends Auditable implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     private  Account account;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @EqualsAndHashCode.Exclude
-    @ToString.Exclude
-    @JoinTable(name = "cart_accessory" , // tao join table
-            joinColumns =  @JoinColumn(name = "cart_id"),
-            inverseJoinColumns = @JoinColumn(name = "accessory_id"))
-    private Set<Accessory> accessories = new HashSet<Accessory>();
-
     public ShoppingCart() {
     }
 

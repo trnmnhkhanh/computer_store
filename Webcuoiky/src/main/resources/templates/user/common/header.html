@@ -57,13 +57,13 @@
             <div class="row fix" >
                 <div class="col-lg-3">
                     <div class="header__logo logo">
-                        <a href=""><img src="../img/logo.png" alt=""></a>
+                        <a th:href="${'/'}"><img th:src="@{/user/img/logo.png}" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a th:href="@{/}">Trang chủ</a></li>
+                            <li class="active"><a th:href="@{'/'}">Trang chủ</a></li>
                             <li><a href="shop-grid.html">Khuyến mãi</a></li>
                             <li><a href="dog-blog.html">Thông tin</a>
                                 <ul class="header__menu__dropdown">

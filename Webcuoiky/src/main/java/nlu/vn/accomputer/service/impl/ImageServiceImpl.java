@@ -4,9 +4,10 @@ import nlu.vn.accomputer.entity.Image;
 import nlu.vn.accomputer.repository.ImageRepo;
 import nlu.vn.accomputer.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ImageServiceImpl implements ImageService {
    @Autowired
     ImageRepo imageRepo;
@@ -15,4 +16,10 @@ public class ImageServiceImpl implements ImageService {
     public List<Image> findAll() {
         return imageRepo.findAll();
     }
+
+    @Override
+    public List<Image> findImageByAccessory_Id(Long id) {
+        return imageRepo.findImageByAccessory_Id(id);
+    }
+
 }

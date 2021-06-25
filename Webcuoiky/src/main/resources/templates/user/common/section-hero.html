@@ -1,7 +1,7 @@
 <div th:fragment="section-hero">
 
 <!-- Hero Section Begin -->
-<section class="hero"  >
+<section class="hero"  ng-app="menu" ng-controller="menuController">
        <div class="container">
     <div class="row">
       <div class="col-lg-3">
@@ -74,40 +74,6 @@
               </div>
             </li>
 
-            <li>
-              <a href="shop-grid.html">
-                <span><img src="img/PC/icon/mouse.png"></span>
-                <span>Chuột+lót chuột</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="shop-grid.html">
-                <span><img src="img/PC/icon/headphone.png"></span>
-                <span>Tai nghe Gaming</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="shop-grid.html">
-                <span><img src="img/PC/icon/chair.png"></span>
-                <span>Ghế Gaming</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="shop-grid.html">
-                <span><img src="img/PC/icon/headphone.png"></span>
-                <span>Thiết bị Audio</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="shop-grid.html">
-                <span><img src="img/PC/icon/accessories.png"></span>
-                <span>Phụ kiện</span>
-              </a>
-            </li>
           </ul>
 
 
@@ -136,12 +102,12 @@
           </div>
         </div>
         <div class="hero__item ">
-          <img class="mySlides" th:src="@{user/img/slideshow/slideshow_2.jpg}" style="width:100%">
-          <img class="mySlides" th:src="@{user/img/slideshow/slideshow_3.jpg}" style="width:100%">
-          <img class="mySlides" th:src="@{user/img/slideshow/slideshow_4.jpg}" style="width:100%">
-          <img class="mySlides" th:src="@{user/img/slideshow/slideshow_5.jpg}" style="width:100%">
-          <img class="mySlides" th:src="@{user/img/slideshow/slideshow_9.jpg}" style="width:100%">
-          <img class="mySlides" th:src="@{user/img/slideshow/slideshow_10.jpg}" style="width:100%">
+          <img class="mySlides" th:src="@{/user/img/slideshow/slideshow_2.jpg}" style="width:100%">
+          <img class="mySlides" th:src="@{/user/img/slideshow/slideshow_3.jpg}" style="width:100%">
+          <img class="mySlides" th:src="@{/user/img/slideshow/slideshow_4.jpg}" style="width:100%">
+          <img class="mySlides" th:src="@{/user/img/slideshow/slideshow_5.jpg}" style="width:100%">
+          <img class="mySlides" th:src="@{/user/img/slideshow/slideshow_9.jpg}" style="width:100%">
+          <img class="mySlides" th:src="@{/user/img/slideshow/slideshow_10.jpg}" style="width:100%">
         </div>
       </div>
     </div>
